@@ -20,6 +20,7 @@ const Chart = ({ className, data }: IChartProps) => {
           day={day}
           percent={amount / highestAmountData.amount}
           highlight={day === highestAmountData.day}
+          amount={amount}
         />
       ))}
     </Box>
@@ -27,10 +28,12 @@ const Chart = ({ className, data }: IChartProps) => {
 };
 
 const ChartBar = ({
+  amount,
   day,
   percent,
   highlight,
 }: {
+  amount: number;
   day: string;
   percent: number;
   highlight?: boolean;
@@ -44,7 +47,7 @@ const ChartBar = ({
         sx={{ height: `${percent * 100}%` }}
       >
         <Box className={styles["bar-popup"]}>
-          <Typography className={styles["amount"]}>$52.36</Typography>
+          <Typography className={styles["amount"]}>${amount}</Typography>
         </Box>
       </Box>
     </Box>
