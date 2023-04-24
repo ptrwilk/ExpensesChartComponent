@@ -1,0 +1,114 @@
+@import url('../../colors.css');
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 550px;
+    min-width: 380px;
+    font-size: 10px;
+}
+
+.balance{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: var(--softred);
+}
+
+.balance .title{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8em;
+    color: var(--verypaleorange);
+}
+
+.balance .amount{
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.chart-section{
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    background: var(--verypaleorange);
+}
+
+.chart-section .title{
+    font-size: 2.5em;
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--darkbrown);
+}
+
+.chart{
+    height: 250px;
+    margin-top: 5rem;
+}
+
+.chart-section hr{
+    margin: 2rem 0;
+    border: 1.7px solid var(--cream);
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.last-month .title,
+.this-month .title{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: var(--mediumbrown);
+}
+
+.last-month .amount,
+.this-month .amount{
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--darkbrown);
+}
+
+.last-month{
+    margin-top: 2rem;
+}
+
+.last-month .title{
+    flex-direction: column-reverse;
+}
+
+.last-month .amount{
+    align-self: flex-end;
+    font-size: 1.3em;
+}
+
+@media (min-width : 450px){
+    .container{
+        font-size: 11px;
+    }
+}
+
+@media (min-width : 500px){
+    .container{
+        font-size: 12px;
+    }
+}
+
+@media (min-width : 550px){
+    .container{
+        font-size: 13px;
+    }
+}
+
+@media (min-width : 600px){
+    .container{
+        font-size: 14px;
+    }
+}

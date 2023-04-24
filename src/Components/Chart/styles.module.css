@@ -1,0 +1,78 @@
+@import url('../../colors.css');
+
+.container{
+    display: flex;
+    align-items: flex-end;
+    gap: 1.2rem;
+
+}
+
+.chart-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.chart-bar .bar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
+.chart-bar .bar{
+    position: relative;
+    width: 100%;
+    border-radius: .3rem;
+    cursor: pointer;
+    background: var(--softred);
+}
+
+.chart-bar .bar:hover{
+    background: var(--softredlight);
+}
+
+.chart-bar .bar-highlight{
+    background: var(--cyan);
+}
+
+.chart-bar .bar-highlight:hover{
+    background: var(--cyanlight);
+}
+
+.chart-bar .bar-popup{
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    padding: .2rem .1rem;
+    width: calc(100% + 20px);
+    border-radius: .3rem;
+    background: var(--darkbrown);
+    opacity: 0;
+}
+
+.chart-bar .bar:hover .bar-popup{
+    opacity: 100;
+}
+
+.chart-bar .bar-popup .amount{
+    font-size: 1.1em;
+    color: var(--verypaleorange);
+}
+
+.chart-bar .text{
+    margin-top: .8rem;
+    color: var(--mediumbrown);
+}
+
+@media (min-width : 500px){
+    .chart-bar .bar-popup{
+        top: -35px;
+    }
+}
